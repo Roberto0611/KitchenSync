@@ -1,0 +1,157 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Color de fondo de la página */
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para la sección de encabezado del inventario */
+.inventory-header {
+    background-color: #49B153; /* Color de fondo verde */
+    text-align: center;
+    padding: 45px 165px;
+}
+
+.inventory-header h2 {
+    color:#FFF;
+    font-size: 36px;
+    margin: 0;
+}
+
+.inventory-header p {
+    color:#FFF;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border-radius: 100px;
+    border: 2px solid #000;
+    background: #FFF;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+/* Estilos para el contenedor de productos */
+.product-container {
+    padding: 20px;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+}
+
+.product-item {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-item img {
+    max-width: 207px; /* Ajusta el ancho de la imagen según tus necesidades */
+    min-width: 200px;
+    height: auto;
+    flex: 1; /* Hace que la imagen ocupe todo el alto del contenedor */
+}
+
+.product-info {
+    flex: 2; /* Hace que la información ocupe el doble de espacio que la imagen */
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.product-info h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Estilos para el botón de eliminación */
+.delete-button {
+    background-color: #FF5733;
+    color: #fff;
+    font-size: 57px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Estilos para la imagen del producto */
+.product-image {
+    max-width: 207px; /* Ajusta el ancho de la imagen según tus necesidades */
+    min-width: 200px;
+    float: left; /* Hace que la imagen se posicione a la izquierda */
+    margin-right: 10px; /* Agrega un margen a la derecha de la imagen */
+}
+
+/* Estilos para el botón de añadir */
+.add-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #305DFF;
+    color: #fff;
+    font-size: 70px;
+    width: 80px;
+    height: 79px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
