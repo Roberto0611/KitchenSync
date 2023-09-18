@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/png" href="../IMG/icon.png"/>
+    <title>KitchenSync - Catalogo</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="inventory.html">Inventario</a></li>
+                <li><a href="list.html">Lista de Super</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="inventory-header">
+        <h2>Catalogo</h2>
+        <p>Control de productos en el catalogo</p>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button>Buscar</button>
+    </div>
+    <div class="product-container">
+        <ul class="product-list">
+            <!-- Producto 1 -->
+            <li class="product-item">
+                <div class="product-info">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fwalmart-labs%2Fimage%2Fupload%2Fw_960%2Cdpr_auto%2Cf_auto%2Cq_auto%3Abest%2Fgr%2Fimages%2Fproduct-images%2Fimg_large%2F00750102051534L.jpg&f=1&nofb=1&ipt=0e4b809e764adf3356aaba6934950f58e308a6c986365ae147adfcde4dd24d35&ipo=images" alt="Producto 1" class="product-image">
+                    <div>
+                        <h3>Leche Lala</h3>
+                        <p>Descripción del Producto 1...</p>
+                    </div>
+                </div>
+                <button class="delete-button">-</button>
+            </li>
+            <!-- Producto 2 -->
+            <li class="product-item">
+                <div class="product-info">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fplayatampa.com%2Fwp-content%2Fuploads%2Fsites%2F78%2F2019%2F07%2Fshutterstock_575528746-1024x778.jpg&f=1&nofb=1&ipt=d5556cf58ceedb3f130f951bad8297a36f023d01097d324d76a8e09a8414ca41&ipo=images" alt="Producto 2" class="product-image">
+                    <div>
+                        <h3>Platanos</h3>
+                        <p>Descripción del Producto 2...</p>
+                    </div>
+                </div>
+                <button class="delete-button"> - </button>
+            </li>
+            <!-- Producto 3 -->
+            <li class="product-item">
+                <div class="product-info">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhttp2.mlstatic.com%2FD_NQ_NP_2X_960992-MLM45865722678_052021-F.jpg&f=1&nofb=1&ipt=ce13f51ec4936b5606b0394e37babc5f2ab01e7a8271768010127a930963ecd6&ipo=images" alt="Producto 1" class="product-image">
+                    <div>
+                        <h3>Tortillas de nopal</h3>
+                        <p>Cantidad: 4</p>
+                    </div>
+                </div>
+                <button class="delete-button">-</button>
+            </li>
+            <!-- Producto 4 -->
+            <li class="product-item">
+                <div class="product-info">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.quequesos.es%2Fwp-content%2Fuploads%2F2018%2F03%2Fqueso-de-oaxaca.jpg&f=1&nofb=1&ipt=252c8d2ab79be3f2930c0088d89165b25b5fc8780208afee9e5e6ec5c390916a&ipo=images" alt="Producto 2" class="product-image">
+                    <div>
+                        <h3>Queso Oaxaca</h3>
+                        <p>Cantidad: 1</p>
+                    </div>
+                </div>
+                <button class="delete-button"> - </button>
+            </li>
+        </ul>
+    </div>
+    <button class="add-button">+</button>
 </body>
 </html>
