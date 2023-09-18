@@ -1,3 +1,13 @@
+/* Variables */
+:root {
+    --lightgray: #efefef;
+    --blue: steelblue;
+    --white: #fff;
+    --black: rgba(0, 0, 0, 0.8);
+    --bounceEasing: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+  }
+  
+
 /* Estilos generales */
 body {
     margin: 0;
@@ -209,7 +219,7 @@ nav ul li a {
 }
 
 /* Estilos para el botón de añadir */
-.add-button {
+.open-modal {
     position: fixed;
     bottom: 20px;
     right: 20px;
