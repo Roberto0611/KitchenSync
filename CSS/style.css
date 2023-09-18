@@ -75,9 +75,28 @@ nav ul li a {
     background-color: #555;
 }
 
+/* Estilos para la sección de encabezado del catalogo */
+.catalog-header {
+    background-color:#b14949; 
+    text-align: center;
+    padding: 45px 165px;
+}
+
+.catalog-header h2 {
+    color:#FFF;
+    font-size: 36px;
+    margin: 0;
+}
+
+.catalog-header p {
+    color:#FFF;
+    font-size: 14px;
+    margin: 0;
+}
+
 /* Estilos para la sección de encabezado del super */
 .list-header {
-    background-color:#49b18b; /* Color de fondo verde */
+    background-color:#49b18b; 
     text-align: center;
     padding: 45px 165px;
 }
