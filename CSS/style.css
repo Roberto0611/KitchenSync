@@ -233,3 +233,128 @@ nav ul li a {
     cursor: pointer;
 }
 
+/* Estilos para el modal */
+.modal { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--black);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+  }
+
+  .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background: var(--white);
+    overflow: auto;
+    cursor: default;
+  }
+
+  .modal-dialog > * {
+    padding: 6  rem;
+  }
+  .modal-header,
+  .modal-footer {
+    background: white;
+  }
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .modal-header .modal-close {
+    font-size: 1.5rem;
+  }
+  .modal p + p {
+    margin-top: 1rem;
+  }
+
+  .modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .modal-header{
+    color: var(--black);
+    font-size: 34px;
+    padding: 3px;
+    margin-left: 10px;
+  }
+
+  .close-modal{
+    margin: 10px;
+  }
+
+  /* Estilos para el formulario y los campos */
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+/* Estilos para el formulario y los campos */
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}

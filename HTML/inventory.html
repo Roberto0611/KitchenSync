@@ -53,18 +53,36 @@
     </div>
 
     <!----------MODAL Y SU BOTON---------->
-    <button class="open-modal">+</button>
+    <button class="open-modal" data-open="modal1" >+</button>
 
     <div class="modal" id="modal1">
         <div class="modal-dialog">
           <header class="modal-header">
-            ...
+            <p class="Modal-Header"> Agregar productos al inventario    </p>
             <button class="close-modal" aria-label="close modal" data-close>✕</button>
           </header>
-          <section class="modal-content">...</section>
-          <footer class="modal-footer">...</footer>
+          <section class="modal-content">
+
+            <form id="product-form">
+                <label for="nombreProducto">Nombre del producto:</label>
+                <input type="text" id="nombreProducto" name="nombreProducto" required>
+                
+                <label for="fechaCaducidad">Fecha de caducidad:</label>
+                <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+                
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" required>
+                
+                <label for="ubicacion">Ubicación:</label>
+                <input type="text" id="ubicacion" name="ubicacion" required>
+                
+                <button type="submit">Agregar</button>
+            </form>
+
+          </section>
         </div>
       </div>
 
+    <script src="../JS/modal.js"></script>
 </body>
 </html>
