@@ -26,31 +26,54 @@
         <button id="catalogButton">Catalogo</button>
     </div>
     <div class="product-container">
-        <ul class="product-list">
+        <table class="product-list" width="100%" cellspacing="0">
             <!-- Producto 1 -->
-            <li class="product-item">
-                <div class="product-info">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhttp2.mlstatic.com%2FD_NQ_NP_2X_960992-MLM45865722678_052021-F.jpg&f=1&nofb=1&ipt=ce13f51ec4936b5606b0394e37babc5f2ab01e7a8271768010127a930963ecd6&ipo=images" alt="Producto 1" class="product-image">
-                    <div>
-                        <h3>Tortillas de nopal</h3>
-                        <p>Cantidad: 4</p>
+            <tr>
+                <td>
+                    <div class="product-item">
+                        <div class="product-info">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="vertical-align: middle;">
+                                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhttp2.mlstatic.com%2FD_NQ_NP_2X_960992-MLM45865722678_052021-F.jpg&f=1&nofb=1&ipt=ce13f51ec4936b5606b0394e37babc5f2ab01e7a8271768010127a930963ecd6&ipo=images" alt="Producto 1">
+                                    </td>
+                                    <td style="vertical-align: middle;">
+                                        <div class="product-text">
+                                            <h3>Tortillas de nopal</h3>
+                                            <p>Cantidad: 4</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="delete-button">-</button>
                     </div>
-                </div>
-                <button class="delete-button">-</button>
-            </li>
+                </td>
+            </tr>
             <!-- Producto 2 -->
-            <li class="product-item">
-                <div class="product-info">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.quequesos.es%2Fwp-content%2Fuploads%2F2018%2F03%2Fqueso-de-oaxaca.jpg&f=1&nofb=1&ipt=252c8d2ab79be3f2930c0088d89165b25b5fc8780208afee9e5e6ec5c390916a&ipo=images" alt="Producto 2" class="product-image">
-                    <div>
-                        <h3>Queso Oaxaca</h3>
-                        <p>Cantidad: 1</p>
+            <tr>
+                <td>
+                    <div class="product-item">
+                        <div class="product-info">
+                            <table style="width: 100%;">
+                                <tr>
+                                    <td style="vertical-align: middle;">
+                                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.quequesos.es%2Fwp-content%2Fuploads%2F2018%2F03%2Fqueso-de-oaxaca.jpg&f=1&nofb=1&ipt=252c8d2ab79be3f2930c0088d89165b25b5fc8780208afee9e5e6ec5c390916a&ipo=images" alt="Producto 2">
+                                    </td>
+                                    <td style="vertical-align: middle;">
+                                        <div class="product-text">
+                                            <h3>Queso Oaxaca</h3>
+                                            <p>Cantidad: 1</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button class="delete-button">-</button>
                     </div>
-                </div>
-                <button class="delete-button"> - </button>
-            </li>
-            <!-- Puedes agregar más productos aquí -->
-        </ul>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <!----------MODAL Y SU BOTON---------->

@@ -178,6 +178,7 @@ nav ul li a {
     min-width: 200px;
     height: auto;
     flex: 1; /* Hace que la imagen ocupe todo el alto del contenedor */
+    margin-right: -169px;
 }
 
 .product-info {
