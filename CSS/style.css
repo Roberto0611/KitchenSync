@@ -196,20 +196,6 @@ nav ul li a {
     color: #555;
 }
 
-/* Estilos para el botón de eliminación */
-.delete-button {
-    background-color: #FF5733;
-    color: #fff;
-    font-size: 57px;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    flex-shrink: 0;
-}
 
 /* Estilos para la imagen del producto */
 .product-image {
@@ -319,15 +305,31 @@ input[type="number"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
+.open-modal {
     background-color: #3498db;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 60px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 49px;
 }
+
+/* Estilos para el botón de eliminación */
+.delete-button {
+    background-color: #FF5733;
+    color: #fff;
+    font-size: 57px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
 /* Estilos para el formulario y los campos */
 form {
     margin: 20px;
@@ -350,12 +352,3 @@ input[type="number"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}

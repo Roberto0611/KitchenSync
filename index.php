@@ -7,8 +7,37 @@
     <link rel="icon" type="image/png" href="IMG/icon.png"/>
     <title>KitchenSync - Inventario</title>
 </head>
-<body>
-    
+
+<script>
+    function confirmDelete(producto_id) {
+        const confirmation = confirm('¿Estás seguro de que deseas eliminar este producto?');
+
+        if (confirmation) {
+            // Si el usuario acepta la confirmación, realiza la eliminación
+            const formData = new FormData();
+            formData.append('producto_id', producto_id);
+
+            fetch('eliminar_producto.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Eliminación exitosa, puedes realizar alguna acción, como recargar la página o actualizar la lista
+                    window.location.reload(); // Recargar la página
+                } else {
+                    alert('Error al eliminar el producto: ' + data.error);
+                }
+            })
+            .catch(error => {
+                alert('Error al eliminar el producto: ' + error.message);
+            });
+        }
+    }
+</script>
+
+<body>   
 <header>
         <nav>
             <ul>
@@ -18,7 +47,7 @@
         </nav>
     </header>
     <div class="inventory-header">
-        <h2>Inventario</h2>
+        <h2>Inventario📦</h2>
         <p>Control de productos en la cocina</p>
     </div>
     <div class="search-bar">
@@ -27,6 +56,7 @@
     </div>
     <div class="product-container">
         <table class="product-list" width="100%" cellspacing="0">
+            <!----------PHP---------->
             <?php
             include 'config/conection.php';
 
@@ -54,13 +84,13 @@
                     echo "</tr>";
                     echo "</table>";
                     echo "</div>";
-                    echo "<button class='delete-button'>-</button>";
+                    echo "<button class='delete-button custom-delete-button' onclick='confirmDelete(" . $row['ID'] . ")'>-</button>";
                     echo "</div>";
                     echo "</td>";
                     echo "</tr>";
                 }
             } else {
-                echo "<tr><td colspan='2'>No hay productos en el inventario.</td></tr>";
+                echo "<tr><td colspan='2'>No hay productos en el inventario, puedes agregarlos desde el botón azul '+'.</td></tr>";
             }
 
             $conexion->close();
@@ -99,6 +129,7 @@
         </div>
       </div>
 
+    <!--Scripts--->
     <script src="JS/modal.js"></script>
 </body>
 </html>
