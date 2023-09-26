@@ -9,8 +9,7 @@
 </head>
 <body>
     
-   
-    <header>
+<header>
         <nav>
             <ul>
                 <li><a href="index.php">Inventario</a></li>
@@ -28,53 +27,44 @@
     </div>
     <div class="product-container">
         <table class="product-list" width="100%" cellspacing="0">
-            <!-- Producto 3 -->
-            <tr>
-                <td>
-                    <div class="product-item">
-                        <div class="product-info">
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td style="vertical-align: middle;">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fres.cloudinary.com%2Fwalmart-labs%2Fimage%2Fupload%2Fw_960%2Cdpr_auto%2Cf_auto%2Cq_auto%3Abest%2Fgr%2Fimages%2Fproduct-images%2Fimg_large%2F00750102051534L.jpg&f=1&nofb=1&ipt=0e4b809e764adf3356aaba6934950f58e308a6c986365ae147adfcde4dd24d35&ipo=images" alt="Producto 4">
-                                    </td>
-                                    <td style="vertical-align: middle;">
-                                        <div class="product-text">
-                                            <h3>Leche Lala</h3>
-                                            <p>Descripción del Producto 3...</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button class="delete-button">-</button>
-                    </div>
-                </td>
-            </tr>
-            <!-- Producto 4 -->
-            <tr>
-                <td>
-                    <div class="product-item">
-                        <div class="product-info">
-                            <table style="width: 100%;">
-                                <tr>
-                                    <td style="vertical-align: middle;">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fplayatampa.com%2Fwp-content%2Fuploads%2Fsites%2F78%2F2019%2F07%2Fshutterstock_575528746-1024x778.jpg&f=1&nofb=1&ipt=d5556cf58ceedb3f130f951bad8297a36f023d01097d324d76a8e09a8414ca41&ipo=images" alt="Producto 2">
-                                    </td>
-                                    <td style="vertical-align: middle;">
-                                        <div class="product-text">
-                                            <h3>Platanos</h3>
-                                            <p>Descripción del Producto 4...</p>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button class="delete-button">-</button>
-                    </div>
-                </td>
-            </tr>
-            <!-- Puedes agregar más productos aquí -->
+            <?php
+            include 'config/conection.php';
+
+            $sql = "SELECT * FROM inventario";
+            $result = $conexion->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>";
+                    echo "<div class='product-item'>";
+                    echo "<div class='product-info'>";
+                    echo "<table style='width: 100%;'>";
+                    echo "<tr>";
+                    echo "<td style='vertical-align: middle;'>";
+                    echo "<img src='" . $row['imagenURL'] . "' alt='" . $row['nombre'] . "'>";
+                    echo "</td>";
+                    echo "<td style='vertical-align: middle;'>";
+                    echo "<div class='product-text'>";
+                    echo "<h3>" . $row['nombre'] . "</h3>";
+                    echo "<p><strong>Caducidad:</strong> " . $row['caducidad'] . "<br><strong>Cantidad:</strong> " . $row['cantidad'] . "<br><strong>Ingreso:</strong> " . $row['ingreso'] . "<br><strong>Ubicación:</strong> " . $row['ubicacion'] . "</p>";
+                    echo "</div>";
+                    echo "</div>";
+                    echo "</td>";
+                    echo "</tr>";
+                    echo "</table>";
+                    echo "</div>";
+                    echo "<button class='delete-button'>-</button>";
+                    echo "</div>";
+                    echo "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='2'>No hay productos en el inventario.</td></tr>";
+            }
+
+            $conexion->close();
+            ?>
         </table>
     </div>
 
