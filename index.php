@@ -10,31 +10,31 @@
 
 <script>
     function confirmDelete(producto_id) {
-        const confirmation = confirm('¿Estás seguro de que deseas eliminar este producto?');
+    const confirmation = confirm('¿Estás seguro de que deseas eliminar un producto?');
 
-        if (confirmation) {
-            // Si el usuario acepta la confirmación, realiza la eliminación
-            const formData = new FormData();
-            formData.append('producto_id', producto_id);
+    if (confirmation) {
+        // Si el usuario acepta la confirmación, realiza la eliminación
+        const formData = new FormData();
+        formData.append('producto_id', producto_id);
 
-            fetch('eliminar_producto.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Eliminación exitosa, puedes realizar alguna acción, como recargar la página o actualizar la lista
-                    window.location.reload(); // Recargar la página
-                } else {
-                    alert('Error al eliminar el producto: ' + data.error);
-                }
-            })
-            .catch(error => {
-                alert('Error al eliminar el producto: ' + error.message);
-            });
-        }
+        fetch('eliminar_producto.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Eliminación exitosa, recarga la página para ver la cantidad actualizada
+                window.location.reload();
+            } else {
+                alert('Error al eliminar el producto: ' + data.error);
+            }
+        })
+        .catch(error => {
+            alert('Error al eliminar el producto: ' + error.message);
+        });
     }
+}
 </script>
 
 <body>   
