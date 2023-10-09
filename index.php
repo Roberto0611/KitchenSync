@@ -111,6 +111,7 @@
             <form id="product-form" action="insertar_producto.php" method="POST">
             <label for="nombreProducto">Nombre del producto:</label>
             <select id="nombreProducto" class="CampoModal" name="nombreProducto" required>
+            <option value="" disabled selected>Selecciona un producto</option>
                 <?php
                 include 'config/conection.php';
                 
@@ -127,21 +128,21 @@
                 ?>
             </select>
 
-                <label for="imagenURL">URL de la imagen:</label>
-                <input type="text" id="imagenURL" name="imagenURL" required>
+            <label for="imagenURL">URL de la imagen:</label>
+            <input type="text" id="imagenURL" name="imagenURL" required readonly>
 
-                <label for="fechaCaducidad">Fecha de caducidad:</label>
-                <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+            <label for="fechaCaducidad">Fecha de caducidad:</label>
+            <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
 
-                <label for="cantidad">Cantidad:</label>
-                <input type="number" id="cantidad" name="cantidad" required>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required min="1">
 
-                <label for="ubicacion">Ubicación:</label>
-                <select id="ubicacion"  class="CampoModal" name="ubicacion" required>
-                    <option value="Refrigerador">Refrigerador</option>
-                    <option value="Alacena">Alacena</option>
-                    <option value="Otro">Otro</option>
-                </select>
+            <label for="ubicacion">Ubicación:</label>
+            <select id="ubicacion"  class="CampoModal" name="ubicacion" required>
+                <option value="Refrigerador">Refrigerador</option>
+                <option value="Alacena">Alacena</option>
+                <option value="Otro">Otro</option>
+            </select>
 
                 <!-- Agregar aquí los campos adicionales que necesites -->
 

@@ -305,6 +305,11 @@ nav ul li a {
     font-size: 16px;
   }
   
+  #imagenURL[readonly] {
+    background-color: #f0f0f0; /* Cambia el color de fondo a un gris claro */
+    color: #777; /* Cambia el color del texto a un gris más claro */
+    cursor: not-allowed; /* Cambia el cursor a un ícono de no permitido */
+}
 
   .close-modal{
     margin: 10px;
