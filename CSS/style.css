@@ -72,19 +72,6 @@ nav ul li a {
     background: #FFF;
 }
 
-.search-bar button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 100px;
-}
-
-.search-bar button:hover {
-    background-color: #555;
-}
-
 /* Estilos para la sección de encabezado del catalogo */
 .catalog-header {
     background-color:#b14949; 

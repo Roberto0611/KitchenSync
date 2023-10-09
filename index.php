@@ -51,8 +51,7 @@
         <p>Control de productos en la cocina</p>
     </div>
     <div class="search-bar">
-        <input type="text" placeholder="Buscar productos...">
-        <button>Buscar</button>
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
     </div>
     <div class="product-container">
         <table class="product-list" width="100%" cellspacing="0">
@@ -140,6 +139,7 @@
             <label for="ubicacion">Ubicación:</label>
             <select id="ubicacion"  class="CampoModal" name="ubicacion" required>
                 <option value="Refrigerador">Refrigerador</option>
+                <option value="Congelador">Congelador</option>
                 <option value="Alacena">Alacena</option>
                 <option value="Otro">Otro</option>
             </select>
@@ -153,6 +153,7 @@
       </div>
 
     <!--Scripts--->
+    <script src="JS/searchBar.js"></script>
     <script src="JS/imgurl.js"></script>
     <script src="JS/modal.js"></script>
 </body>
