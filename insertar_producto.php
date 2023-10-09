@@ -8,9 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ubicacion = $_POST['ubicacion'];
     $imagenURL = $_POST['imagenURL'];
     
+    // Obtén la fecha actual en formato YYYY-MM-DD
+    $fechaIngreso = date("Y-m-d");
 
-    // Realiza la consulta SQL para insertar el producto
-    $sql = "INSERT INTO inventario (nombre, caducidad, cantidad, ubicacion,imagenURL) VALUES ('$nombreProducto', '$fechaCaducidad', '$cantidad', '$ubicacion', '$imagenURL')";
+    // Realiza la consulta SQL para insertar el producto, incluyendo la fecha de ingreso
+    $sql = "INSERT INTO inventario (nombre, caducidad, cantidad, ubicacion, imagenURL, ingreso) VALUES ('$nombreProducto', '$fechaCaducidad', '$cantidad', '$ubicacion', '$imagenURL', '$fechaIngreso')";
 
     if ($conexion->query($sql) === TRUE) {
         // Éxito: El producto se ha agregado correctamente
