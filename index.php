@@ -108,28 +108,51 @@
             <button class="close-modal" aria-label="close modal" data-close>✕</button>
           </header>
           <section class="modal-content">
-
-            <form id="product-form">
-                <label for="nombreProducto">Nombre del producto:</label>
-                <input type="text" id="nombreProducto" name="nombreProducto" required>
+            <form id="product-form" action="insertar_producto.php" method="POST">
+            <label for="nombreProducto">Nombre del producto:</label>
+            <select id="nombreProducto" class="CampoModal" name="nombreProducto" required>
+                <?php
+                include 'config/conection.php';
                 
+                $sql = "SELECT nombre FROM catalogo";
+                $result = $conexion->query($sql);
+                
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row['nombre'] . "'>" . $row['nombre'] . "</option>";
+                    }
+                }
+                
+                $conexion->close();
+                ?>
+            </select>
+
+                <label for="imagenURL">URL de la imagen:</label>
+                <input type="text" id="imagenURL" name="imagenURL" required>
+
                 <label for="fechaCaducidad">Fecha de caducidad:</label>
                 <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
-                
+
                 <label for="cantidad">Cantidad:</label>
                 <input type="number" id="cantidad" name="cantidad" required>
-                
-                <label for="ubicacion">Ubicación:</label>
-                <input type="text" id="ubicacion" name="ubicacion" required>
-                
-                <button type="submit">Agregar</button>
-            </form>
 
-          </section>
+                <label for="ubicacion">Ubicación:</label>
+                <select id="ubicacion"  class="CampoModal" name="ubicacion" required>
+                    <option value="Refrigerador">Refrigerador</option>
+                    <option value="Alacena">Alacena</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
+                <!-- Agregar aquí los campos adicionales que necesites -->
+
+                <button type="submit" class="modalButton">Agregar</button>
+            </form>
+</section>
         </div>
       </div>
 
     <!--Scripts--->
+    <script src="JS/imgurl.js"></script>
     <script src="JS/modal.js"></script>
 </body>
 </html>

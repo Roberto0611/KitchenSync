@@ -278,6 +278,33 @@ nav ul li a {
     padding: 3px;
     margin-left: 10px;
   }
+  
+  /* Estilo para el botón en el modal */
+.modalButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Cambio de color al pasar el ratón por encima */
+  .modalButton:hover {
+    background-color: #0056b3;
+  }
+
+  .CampoModal{
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
 
   .close-modal{
     margin: 10px;
