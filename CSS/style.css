@@ -222,7 +222,7 @@ nav ul li a {
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-    /*transition: all 0.35s ease-in;*/
+    transition: all 0.2s ease-in;
   }
 
   .modal-dialog {
