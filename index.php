@@ -42,7 +42,7 @@
         <nav>
             <ul>
                 <li><a href="index.php">Inventario</a></li>
-                <li><a href="HTML/list.html">Lista de Super</a></li>
+                <li><a href="HTML/list.php">Lista de Super</a></li>
             </ul>
         </nav>
     </header>
