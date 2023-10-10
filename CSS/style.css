@@ -127,7 +127,7 @@ nav ul li a {
     font-size: 20px;
 }
 
-.super-bar button {
+.catalogButton {
     padding: 20px 25px;
     background-color: #333;
     color: #fff;
@@ -136,7 +136,7 @@ nav ul li a {
     border-radius: 100px;
 }
 
-.super-bar button:hover {
+.catalogButton:hover {
     background-color: #555;
 }
 

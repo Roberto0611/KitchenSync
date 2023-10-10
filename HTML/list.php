@@ -20,9 +20,10 @@
         <h2>Mi lista del súper🧺</h2>
         <p>Añade productos a la lista de compras</p>
     </div>
-    <div class="super-bar">
-        <input type="text" placeholder="Buscar productos...">
-        <button id="catalogButton">Catalogo</button>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <button id="catalogButton" class="catalogButton">Catalogo</button>
     </div>
     <div class="product-container">
     <table class="product-list" width="100%" cellspacing="0">
@@ -55,7 +56,10 @@
                 echo "</tr>";
                 echo "</table>";
                 echo "</div>";
-                echo "<button class='delete-button' onclick='confirmDelete(" . $row['ID'] . ")'>-</button>";
+                echo "<form method='post' action='eliminar.php'>";
+                echo "<input type='hidden' name='product_id' value='" . $row['ID'] . "'>";
+                echo "<button type='submit' class='delete-button'>-</button>";
+                echo "</form>";
                 echo "</div>";
                 echo "</td>";
                 echo "</tr>";
@@ -67,6 +71,7 @@
         $conexion->close();
         ?>
     </table>
+</div>
 </div>
 
     <!----------MODAL Y SU BOTON---------->
@@ -119,6 +124,7 @@
 </div>
 
 
+    <script src="../JS/searchBar.js"></script>
     <script src="../JS/imgurlSuper.js"></script>
     <script src="../JS/modal.js"></script>
     <script src="../JS/main.js"></script>
