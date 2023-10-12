@@ -39,6 +39,23 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Estilos para la barra de desplazamiento */
+/* Estilo para el riel de la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 12px; /* Ancho de la barra de desplazamiento */
+  }
+  
+  /* Estilo para el "pulgarcito" (la parte deslizable de la barra de desplazamiento) */
+  ::-webkit-scrollbar-thumb {
+    background: #FF9966; /* Cambia el color de fondo del pulgarcito a un color naranja (#FF5733) */
+    border-radius: 6px; /* Borde redondeado del pulgarcito */
+  }
+  
+  /* Estilo cuando se pasa el ratón sobre la barra de desplazamiento */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF5733;; /* Cambia el color al pasar el ratón por encima (#FF9966) */
+  }  
+
 /* Estilos para la sección de encabezado del inventario */
 .inventory-header {
     background-color: #49B153; /* Color de fondo verde */
