@@ -39,6 +39,10 @@ nav ul li a {
     font-weight: bold;
 }
 
+img{
+    padding-right: 50px;
+}
+
 /* Estilos para la barra de desplazamiento */
 /* Estilo para el riel de la barra de desplazamiento */
 ::-webkit-scrollbar {

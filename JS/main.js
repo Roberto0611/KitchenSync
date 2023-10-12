@@ -4,5 +4,5 @@
 catalogButton = document.getElementById('catalogButton');
 
 catalogButton.addEventListener('click', function(){
-    window.location.href = '../HTML/catalog.html';
+    window.location.href = '../HTML/catalog.php';
 })
