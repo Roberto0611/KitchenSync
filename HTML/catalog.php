@@ -21,7 +21,7 @@
         <p>Control de productos en el catálogo</p>
     </div>
     <div class="search-bar">
-        <input type="text" placeholder="Buscar productos...">
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
     </div>
     <div class="product-container">
         <table class="product-list" width="100%" cellspacing="0">
@@ -86,5 +86,6 @@ $conexion->close();
         </div>
     </div>
     <script src="../JS/modal.js"></script>
+    <script src="../JS/searchBar.js"></script>
 </body>
 </html>

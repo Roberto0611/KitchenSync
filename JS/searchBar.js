@@ -3,7 +3,7 @@
 // Agrega un evento input al campo de búsqueda
 document.getElementById('searchInput').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase(); // Obtén el término de búsqueda en minúsculas
-
+    console.log('searchbar')
     // Recorre todos los elementos de productos y verifica si coinciden con el término de búsqueda
     const productItems = document.querySelectorAll('.product-item');
     productItems.forEach(function(item) {
