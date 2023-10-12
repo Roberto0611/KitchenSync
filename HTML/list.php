@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" type="image/png" href="../IMG/icon.png"/>
-    <title>KitchenSync - L.Súper</title>
+    <title>KitchenSync - L.Súper🧺</title>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="../index.php">Inventario</a></li>
+                <li><a href="../index.php">Inventario📦</a></li>
                 <li><a href="list.php">Mi lista de Súper🧺</a></li>
             </ul>
         </nav>
@@ -23,7 +23,7 @@
     
     <div class="search-bar">
         <input type="text" id="searchInput" placeholder="Buscar productos...">
-        <button id="catalogButton" class="catalogButton">Catalogo</button>
+        <button id="catalogButton" class="catalogButton">Catalogo📚</button>
     </div>
     <div class="product-container">
     <table class="product-list" width="100%" cellspacing="0">

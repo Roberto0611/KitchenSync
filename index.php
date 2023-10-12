@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="icon" type="image/png" href="IMG/icon.png"/>
-    <title>KitchenSync - Inventario</title>
+    <title>KitchenSync - Inventario📦</title>
 </head>
 
 <script>
@@ -41,8 +41,8 @@
 <header>
         <nav>
             <ul>
-                <li><a href="index.php">Inventario</a></li>
-                <li><a href="HTML/list.php">Lista de Super</a></li>
+                <li><a href="index.php">Inventario📦</a></li>
+                <li><a href="HTML/list.php">Lista de Super🧺</a></li>
             </ul>
         </nav>
     </header>
