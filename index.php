@@ -76,7 +76,7 @@
                     echo "<td style='vertical-align: middle;'>";
                     echo "<div class='product-text'>";
                     echo "<h3>" . $row['nombre'] . "</h3>";
-                    echo "<p><strong>Caducidad:</strong> " . $row['caducidad'] . "<br><strong>Cantidad:</strong> " . $row['cantidad'] . "<br><strong>Ingreso:</strong> " . $row['ingreso'] . "<br><strong>Ubicación:</strong> " . $row['ubicacion'] . "</p>";
+                    echo "<p><strong>Caducidad:</strong> <span class='fecha-caducidad'>" . $row['caducidad'] . "</span><br><strong>Cantidad:</strong> " . $row['cantidad'] . "<br><strong>Ingreso:</strong> " . $row['ingreso'] . "<br><strong>Ubicación:</strong> " . $row['ubicacion'] . "</p>";
                     echo "</div>";
                     echo "</div>";
                     echo "</td>";
@@ -157,6 +157,40 @@
 </section>
         </div>
       </div>
+
+    <!--Script para mostrar el color en la caducidad-->
+      <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener todos los elementos con clase "product-info"
+        const productos = document.querySelectorAll('.product-info');
+
+        // Fecha actual
+        const fechaActual = new Date();
+
+        // Recorrer todos los productos
+        productos.forEach((producto) => {
+            // Obtener el elemento de fecha de caducidad en cada producto
+            const fechaElement = producto.querySelector('.fecha-caducidad');
+
+            if (fechaElement) {
+                // Obtener la fecha de caducidad desde el elemento
+                const fechaCaducidad = new Date(fechaElement.textContent);
+
+                // Calcular la diferencia en días
+                const diferenciaDias = Math.ceil((fechaCaducidad - fechaActual) / (1000 * 60 * 60 * 24));
+
+                // Aplicar estilos basados en la diferencia de días
+                if (diferenciaDias < 0) {
+                    fechaElement.style.color = 'red'; // Caducado
+                } else if (diferenciaDias <= 7) {
+                    fechaElement.style.color = 'yellow'; // Casi caduca
+                } else {
+                    fechaElement.style.color = 'green'; // Bueno
+                }
+            }
+        });
+    });
+</script>
 
     <!--Scripts--->
     <script src="JS/searchname.js"></script>
