@@ -108,6 +108,12 @@
           </header>
           <section class="modal-content">
             <form id="product-form" action="insertar_producto.php" method="POST">
+
+            <!----campo para filtrar los resultados----->
+            <label for="busquedaProducto">Buscar producto:</label>
+            <input type="text" id="busquedaProducto" name="busquedaProducto" oninput="filtrarProductos()" placeholder="Escribe para buscar...">
+            <div id="resultadosBusqueda"></div>
+
             <label for="nombreProducto">Nombre del producto:</label>
             <select id="nombreProducto" class="CampoModal" name="nombreProducto" required>
             <option value="" disabled selected>Selecciona un producto</option>
@@ -153,6 +159,7 @@
       </div>
 
     <!--Scripts--->
+    <script src="JS/searchname.js"></script>
     <script src="JS/searchBar.js"></script>
     <script src="JS/imgurl.js"></script>
     <script src="JS/modal.js"></script>
