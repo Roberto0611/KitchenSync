@@ -57,43 +57,38 @@
         <table class="product-list" width="100%" cellspacing="0">
             <!----------PHP---------->
             <?php
-            include 'config/conection.php';
+    include 'config/conection.php';
 
-            $sql = "SELECT * FROM inventario";
-            $result = $conexion->query($sql);
+    $sql = "SELECT * FROM inventario";
+    $result = $conexion->query($sql);
 
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>";
-                    echo "<div class='product-item'>";
-                    echo "<div class='product-info'>";
-                    echo "<table style='width: 100%;'>";
-                    echo "<tr>";
-                    echo "<td style='vertical-align: middle;'>";
-                    echo "<img src='" . $row['imagenURL'] . "' alt='" . $row['nombre'] . "'>";
-                    echo "</td>";
-                    echo "<td style='vertical-align: middle;'>";
-                    echo "<div class='product-text'>";
-                    echo "<h3>" . $row['nombre'] . "</h3>";
-                    echo "<p><strong>Caducidad:</strong> <span class='fecha-caducidad'>" . $row['caducidad'] . "</span><br><strong>Cantidad:</strong> " . $row['cantidad'] . "<br><strong>Ingreso:</strong> " . $row['ingreso'] . "<br><strong>Ubicación:</strong> " . $row['ubicacion'] . "</p>";
-                    echo "</div>";
-                    echo "</div>";
-                    echo "</td>";
-                    echo "</tr>";
-                    echo "</table>";
-                    echo "</div>";
-                    echo "<button class='delete-button custom-delete-button' onclick='confirmDelete(" . $row['ID'] . ")'>-</button>";
-                    echo "</div>";
-                    echo "</td>";
-                    echo "</tr>";
-                }
-            } else {
-                echo "<tr><td colspan='2'>No hay productos en el inventario, puedes agregarlos desde el botón azul '+'.</td></tr>";
-            }
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo "<div class='product-item'>";
+            echo "<div class='product-info'>";
+            echo "<div class='product-image'>";
+            echo "<img src='" . $row['imagenURL'] . "' alt='" . $row['nombre'] . "'>";
+            echo "</div>";
+            echo "<div class='product-text'>";
+            echo "<h3>" . $row['nombre'] . "</h3>";
+            echo "<div class='text-info'>";
+            echo "<p><strong>Caducidad:</strong> <span class='fecha-caducidad'>" . $row['caducidad'] . "</span></p>";
+            echo "<p><strong>Cantidad:</strong> " . $row['cantidad'] . "</p>";
+            echo "<p><strong>Ingreso:</strong> " . $row['ingreso'] . "</p>";
+            echo "<p><strong>Ubicación:</strong> " . $row['ubicacion'] . "</p>";
+            echo "</div>";
+            echo "</div>";
+            echo "<button class='delete-button custom-delete-button' onclick='confirmDelete(" . $row['ID'] . ")'>-</button>";
+            echo "</div>";
+            echo "</div>";
+        }
+    } else {
+        echo "<p>No hay productos en el inventario, puedes agregarlos desde el botón azul '+'.</p>";
+    }
 
-            $conexion->close();
-            ?>
+    $conexion->close();
+    ?>
+
         </table>
     </div>
 

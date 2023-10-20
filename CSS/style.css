@@ -191,11 +191,12 @@ img{
 
 .product-info {
     flex: 2; /* Hace que la información ocupe el doble de espacio que la imagen */
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: center; /* Alinea el texto a la izquierda */
+    display: contents
 }
 
 .product-info h3 {
-    margin: 5px 0;
+    margin: 5px 107px;
     font-size: 16px;
 }
 
@@ -392,3 +393,94 @@ input[type="number"] {
     font-size: 16px;
 }
 
+/*--------------------------------Media Querys for responsive design--------------------------------*/
+@media (max-width: 766px){
+    header {
+        width: 107%;
+    }
+    .inventory-header {
+        width: 60%;
+    }
+}
+
+@media (max-width: 764px) {
+    .product-item img {
+        margin-right: 0px;
+        margin-left: 64px;
+    }
+
+    .product-item {
+        padding: 55px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 640px) {
+    .inventory-header {
+        background-color: #49B153;
+        text-align: center;
+        padding: 45px 0px;
+        width: 116%;
+    }
+    header {
+        width: 116%;
+    }
+
+    .product-item { 
+    padding: 55px;
+    width: 90%;
+    }
+}
+
+@media (max-width: 580px) {
+    .product-info {
+        display: block;
+    }
+}
+
+@media (max-width: 426px) {
+    .search-bar input[type="text"] {
+        margin-left: 38px;
+        text-align: center;
+    }
+    .delete-button {    
+        margin-left: 141px;
+    }
+}
+
+@media (max-width: 376px){
+    .product-item img {
+        margin-right: 0px;
+        margin-left: 49px;
+    }
+    .delete-button {
+        margin-left: 117px;
+    }
+}
+@media (max-width: 347px){
+    .inventory-header {
+        width: 110%;
+    }
+}
+
+@media (max-width:320px){
+    .inventory-header {
+        width: 130%;
+    }
+    header {
+        width: 130%;
+    }
+    .search-bar input[type="text"] {
+        margin-left: 68px;
+        padding: 10px;
+        padding-left: 74px;
+        text-align: justify;
+    }
+    .product-item img {
+        margin-right: 0px;
+        margin-left: 24px;
+    }
+    .delete-button {
+        margin-left: 97px;
+    }
+}
