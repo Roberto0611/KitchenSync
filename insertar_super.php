@@ -20,4 +20,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conexion->close();
+//php finish
 ?>
