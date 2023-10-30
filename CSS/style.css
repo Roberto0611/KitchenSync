@@ -439,7 +439,7 @@ input[type="number"] {
 }
 
 @media (max-width: 426px) {
-    .search-bar input[type="text"] {
+    .searchBarIndex {
         margin-left: 38px;
         text-align: center;
     }
@@ -484,3 +484,42 @@ input[type="number"] {
         margin-left: 97px;
     }
 }
+
+@media (max-width:426px){
+    #headerList{
+        width: 263%;
+    }
+
+    .list-header {
+        background-color: #49b18b;
+        text-align: center;
+        width: 30%;
+        padding: 45px 165px;
+    }
+
+    .searchbarList{
+        margin-left: 370px;
+        text-align: center;
+    }
+
+    .catalogButton {
+        padding: 10px 45px;
+        margin-left: 104%;
+    }
+}
+
+@media (max-width: 376px){
+    .catalogButton {
+        padding: 10px 45px;
+        margin-left: 114%;
+    }
+    #headerList {
+        width: 280%;
+    }
+}
+
+@media (max-width: 321px){
+    #headerList {
+        width: 293%;
+    }
+}   

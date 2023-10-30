@@ -2,13 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" type="image/png" href="../IMG/icon.png"/>
     <title>KitchenSync - L.Súper🧺</title>
 </head>
 <body>
-    <header>
+    <header id="headerList">
         <nav>
             <ul>
                 <li><a href="../index.php">Inventario📦</a></li>
@@ -22,7 +22,7 @@
     </div>
     
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <input type="text" class="searchbarList" id="searchInput" placeholder="Buscar productos...">
         <button id="catalogButton" class="catalogButton">Catalogo📚</button>
     </div>
     <div class="product-container">

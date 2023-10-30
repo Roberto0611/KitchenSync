@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="icon" type="image/png" href="IMG/icon.png"/>
     <title>KitchenSync - Inventario📦</title>
@@ -51,7 +51,7 @@
         <p>Control de productos en la cocina</p>
     </div>
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <input type="text" class="searchBarIndex" id="searchInput" placeholder="Buscar productos...">
     </div>
     <div class="product-container">
         <table class="product-list" width="100%" cellspacing="0">
