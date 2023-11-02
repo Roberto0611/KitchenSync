@@ -132,7 +132,7 @@
             <input type="text" id="imagenURL" name="imagenURL" required readonly>
 
             <label for="fechaCaducidad">Fecha de caducidad:</label>
-            <input type="date" id="fechaCaducidad" name="fechaCaducidad" required>
+            <input type="date" id="fechaCaducidad" name="fechaCaducidad">
 
             <label for="cantidad">Cantidad:</label>
             <input type="number" id="cantidad" name="cantidad" required min="1">
